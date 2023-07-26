@@ -70,7 +70,7 @@ img {
 /**----------------------------COMPONENTS STYLES---------------------------*/
 
 .container {
-  width: 100%;
+  /* width: 100%; */
   width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
@@ -81,6 +81,8 @@ img {
 /**----------------------------HEADER---------------------------*/
 
 .header {
+  padding-left: 15px;
+  padding-right: 15px;
   border-bottom: 1px solid var(--cornflower, #e7e9fc);
   background: var(--white, #fff);
 }
@@ -88,13 +90,9 @@ img {
 .header-container {
   display: flex;
   align-items: center;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .container-hero {
-  padding-top: 188px;
-  padding-bottom: 188px;
 }
 
 .header-navigation {
@@ -111,6 +109,8 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-right: 76px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .header-logo-web {
@@ -184,6 +184,8 @@ address {
 
 .hero {
   background-color: var(--navyblue, #2e2f42);
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 
 .hero-title {
@@ -211,6 +213,8 @@ address {
   padding: 14px 32px;
   border-radius: 4px;
   border: none;
+  min-width: 169px;
+  height: 56px;
 }
 .hero-btn:hover {
   background-color: #404bbf;
@@ -255,6 +259,7 @@ address {
 
 .doing {
   background: #fff;
+  padding-bottom: 120px;
 }
 .doing-title {
   color: var(--navyblue, #2e2f42);
@@ -268,7 +273,6 @@ address {
 .doing-list {
   display: flex;
   gap: 24px;
-  padding-bottom: 120px;
 }
 
 .doing-item {
@@ -291,7 +295,7 @@ address {
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--navyblue, #2e2f42);
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 .team-list {
@@ -311,6 +315,11 @@ address {
 .team-img {
 }
 
+.team-container-wrap {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 .team-subtitle {
   font-weight: 500;
   font-size: 20px;
@@ -318,7 +327,7 @@ address {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--navyblue, #2e2f42);
-  margin-top: 32px;
+  text-align: center;
   margin-bottom: 8px;
 }
 .team-caption {
@@ -327,7 +336,7 @@ address {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--slate, #434455);
-  margin-bottom: 32px;
+  text-align: center;
 }
 
 /**----------------------------FOOTER---------------------------*/
@@ -345,6 +354,8 @@ address {
   line-height: 1.17; /* 116.667% */
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .fotter-link-web {
@@ -357,7 +368,6 @@ address {
   line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
   max-width: 264px;
-  padding-top: 18px;
 }
 
 /**----------------------------PORTFOLIO---------------------------*/
@@ -370,12 +380,14 @@ address {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+  row-gap: 48px;
+  margin-bottom: 48px;
 }
 
 .portfolio-item {
   border: 1px solid var(--cornflower, #e7e9fc);
   background: var(--white, #fff);
-
+  /* margin-bottom: 0 */
   width: calc((100% - 48px) / 3);
 }
 
@@ -385,11 +397,17 @@ address {
 .portfolio-img {
 }
 
+.portfolio-container-wrap {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+
 .portfolio-list-btn {
   display: flex;
   justify-content: center;
   gap: 24px;
-  padding-bottom: 72px;
+  margin-bottom: 72px;
 }
 
 .portfolio-btn {
@@ -410,10 +428,12 @@ address {
 .portfolio-btn:hover {
   color: #ffffff;
   background-color: #404bbf;
+  border: 1px solid transparent;
 }
 .portfolio-btn:focus {
   color: #ffffff;
   background-color: #404bbf;
+  border: 1px solid transparent;
 }
 
 .portfolio-item-title {
@@ -423,8 +443,7 @@ address {
   font-weight: 500;
   line-height: 1.2; /* 120% */
   letter-spacing: 0.02em;
-  padding-top: 32px;
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .portfolio-item-caption {
@@ -433,5 +452,4 @@ address {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  padding-bottom: 32px;
 }
