@@ -48,20 +48,46 @@ ol {
   margin-bottom: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /**----------------------------COMPONENTS STYLES---------------------------*/
 
 .container {
   width: 100%;
-  width: 1188px;
+  width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
 }
 
 /**----------------------------HEADER---------------------------*/
 
 .header {
+  border-bottom: 1px solid var(--cornflower, #e7e9fc);
+  background: var(--white, #fff);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
   padding-top: 24px;
   padding-bottom: 24px;
 }
@@ -69,6 +95,11 @@ ol {
 .container-hero {
   padding-top: 188px;
   padding-bottom: 188px;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
 }
 
 .header-logo {
@@ -79,6 +110,7 @@ ol {
   line-height: 1.17; /* 116.667% */
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-right: 76px;
 }
 
 .header-logo-web {
@@ -92,6 +124,15 @@ ol {
   text-transform: uppercase;
 }
 
+.header-menu-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-address-item {
+}
+
 .header-menu-link {
   color: #2e2f42;
   font-size: 16px;
@@ -102,6 +143,17 @@ ol {
 
 address {
   font-style: normal;
+  margin-left: auto;
+}
+
+.header-address-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-address-item {
+  max-width: 153px;
 }
 
 .header-address-link {
@@ -126,6 +178,10 @@ address {
   color: #404bbf;
 }
 
+/**----------------------------HEADER---------------------------*/
+
+/**----------------------------HERO---------------------------*/
+
 .hero {
   background-color: var(--navyblue, #2e2f42);
 }
@@ -137,6 +193,7 @@ address {
   line-height: 1.07; /* 107.143% */
   letter-spacing: 0.02em;
   max-width: 496px;
+  margin: auto;
   margin-bottom: 48px;
 }
 
@@ -149,6 +206,11 @@ address {
   letter-spacing: 0.04em;
   background: var(--iris, #4d5ae5);
   cursor: pointer;
+  display: block;
+  margin: auto;
+  padding: 14px 32px;
+  border-radius: 4px;
+  border: none;
 }
 .hero-btn:hover {
   background-color: #404bbf;
@@ -166,11 +228,12 @@ address {
 }
 
 .advantages-list {
-  margin-left: 156px;
-  margin-right: 156px;
+  display: flex;
+  gap: 24px;
 }
 
 .advantages-item {
+  width: calc((100% - 24px * 3) / 4);
 }
 
 .advantages-item-title {
@@ -203,10 +266,13 @@ address {
   margin-bottom: 72px;
 }
 .doing-list {
+  display: flex;
+  gap: 24px;
   padding-bottom: 120px;
 }
 
 .doing-item {
+  width: calc((100% - 24px * 2) / 3);
 }
 .doing-img {
 }
@@ -229,9 +295,16 @@ address {
 }
 
 .team-list {
+  display: flex;
+  gap: 24px;
 }
 
 .team-item {
+  border-radius: 0px 0px 4px 4px;
+  background: var(--white, #fff);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
   background-color: #ffffff;
 }
 
@@ -254,11 +327,14 @@ address {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--slate, #434455);
+  margin-bottom: 32px;
 }
 
 /**----------------------------FOOTER---------------------------*/
 .footer {
   background: #2e2f42;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .fotter-link {
@@ -280,9 +356,41 @@ address {
   font-size: 16px;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
+  max-width: 264px;
+  padding-top: 18px;
 }
 
 /**----------------------------PORTFOLIO---------------------------*/
+.portfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.portfolio-item {
+  border: 1px solid var(--cornflower, #e7e9fc);
+  background: var(--white, #fff);
+
+  width: calc((100% - 48px) / 3);
+}
+
+.portfolio-link {
+}
+
+.portfolio-img {
+}
+
+.portfolio-list-btn {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding-bottom: 72px;
+}
 
 .portfolio-btn {
   color: var(--iris, #4d5ae5);
@@ -293,6 +401,10 @@ address {
   line-height: 1.5; /* 150% */
   letter-spacing: 0.04em;
   cursor: pointer;
+
+  border-radius: 4px;
+  padding: 12px 24px;
+  border: 1px solid var(--cornflower, #e7e9fc);
 }
 
 .portfolio-btn:hover {
@@ -311,6 +423,8 @@ address {
   font-weight: 500;
   line-height: 1.2; /* 120% */
   letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 8px;
 }
 
 .portfolio-item-caption {
@@ -319,4 +433,5 @@ address {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  padding-bottom: 32px;
 }
