@@ -28,8 +28,11 @@
   background: var(--white);
 }
 .team-item-img {
-  margin-bottom: 32px;
+  
 }
+.team-item-content {
+  padding: 32px 16px;
+} 
 .team-item-name {
   font-weight: 500;
   font-size: 20px;
